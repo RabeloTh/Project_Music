@@ -1,0 +1,203 @@
+/* Importação de fonte do Google Fonts para um visual mais moderno */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+
+
+:root {
+    --primary-color: #2e2e2e; /* Azul vibrante */
+    --secondary-color: #6c757d; /* Cinza */
+    --success-color: #28a745; /* Verde */
+    --error-color: #dc3545; /* Vermelho */
+    --bg-color: #cacaca; /* Fundo claro */
+    --text-color: #343a40; /* Texto escuro */
+    --card-bg: #ffffff; /* Fundo de seções */
+    --border-color: #e9ecef; /* Cor da borda */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 1.1em;
+}
+
+main {
+    max-width: 900px;
+    width: 90%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex-grow: 1; /* Permite que o main ocupe o espaço restante */
+}
+
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.platform-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn.primary {
+    background-color: var(--primary-color);
+}
+
+.btn.primary:hover {
+    background-color: #0056b3; /* Tom mais escuro do azul */
+}
+
+.btn.success {
+    background-color: var(--success-color);
+}
+
+.btn.success:hover {
+    background-color: #218838; /* Tom mais escuro do verde */
+}
+
+/* Cores específicas das plataformas (apenas visual, não funcional) */
+.btn.spotify { background-color: #1DB954; }
+.btn.spotify:hover { background-color: #1ed760; }
+
+.btn.apple-music { background-color: #FC3C44; }
+.btn.apple-music:hover { background-color: #ff545a; }
+
+.btn.youtube-music { background-color: #FF0000; }
+.btn.youtube-music:hover { background-color: #cc0000; }
+
+.btn.deezer { background-color: #FEAA2D; }
+.btn.deezer:hover { background-color: #e59828; }
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1em;
+    background-color: var(--card-bg);
+}
+
+.status-message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.status-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+}
+
+.status-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+}
+
+.status-message.info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border-color: #bee5eb;
+}
+
+.hidden {
+    display: none !important;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: var(--text-color);
+    color: white;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    main {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .platform-buttons {
+        flex-direction: column; /* Botões empilhados em telas menores */
+    }
+    /* .img1 {
+    width: 100px;
+    height: auto; /* Mantém a proporção */
+    /* border: 5px solid blue; */
+    /* border-radius: 10px; */
+    /* margin-top: 20px; */
+}

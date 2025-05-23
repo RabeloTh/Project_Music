@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlists Transfer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo.jpg">
+</head>
+<body>
+    <header>
+        <!-- <img class="img1" src="logo.jpg" -->
+        <h1>Transferidor de Playlists 🎶</h1>
+        <p>Mova suas playlists entre suas plataformas musicais favoritas.</p>
+    </header>
+
+    <main>
+        <section class="platform-selection">
+            <h2>1. Conecte sua Plataforma de Origem</h2>
+            <div class="platform-buttons">
+                <button id="connectSpotifySource" class="btn spotify">Conectar Spotify</button>
+                <button id="connectAppleMusicSource" class="btn apple-music">Conectar Apple Music</button>
+                <button id="connectYouTubeMusicSource" class="btn youtube-music">Conectar YouTube Music</button>
+                <button id="connectDeezerSource" class="btn deezer">Conectar Deezer</button>
+                </div>
+            <p id="sourceStatus" class="status-message">Status: Nenhuma plataforma de origem conectada.</p>
+        </section>
+
+        <section class="playlist-selection hidden">
+            <h2>2. Selecione a Playlist para Transferir</h2>
+            <select id="playlistSelect">
+                <option value="">Carregando playlists...</option>
+            </select>
+            <button id="loadPlaylistsBtn" class="btn primary">Carregar Playlists</button>
+            <p id="playlistStatus" class="status-message"></p>
+        </section>
+
+        <section class="platform-selection hidden">
+            <h2>3. Conecte sua Plataforma de Destino</h2>
+            <div class="platform-buttons">
+                <button id="connectSpotifyDest" class="btn spotify">Conectar Spotify</button>
+                <button id="connectAppleMusicDest" class="btn apple-music">Conectar Apple Music</button>
+                <button id="connectYouTubeMusicDest" class="btn youtube-music">Conectar YouTube Music</button>
+                <button id="connectDeezerDest" class="btn deezer">Conectar Deezer</button>
+                </div>
+            <p id="destStatus" class="status-message">Status: Nenhuma plataforma de destino conectada.</p>
+        </section>
